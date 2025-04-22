@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cspr5tu27vq66"]
+[gd_scene load_steps=10 format=3 uid="uid://cspr5tu27vq66"]
 
 [ext_resource type="Texture2D" uid="uid://cuy3db8kkt0n5" path="res://assets/Temp Sprites/enemy.png" id="1_ct2e5"]
 
@@ -53,7 +53,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8mvfn"]
 size = Vector2(16, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vr3ds"]
+size = Vector2(16, 5)
+
 [node name="enemy" type="CharacterBody2D"]
+collision_layer = 4
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_xa4st")
@@ -61,3 +65,8 @@ animation = &"Hit"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_8mvfn")
+
+[node name="StabHitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StabHitbox"]
+shape = SubResource("RectangleShape2D_vr3ds")

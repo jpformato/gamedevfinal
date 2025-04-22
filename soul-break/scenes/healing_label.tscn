@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://degdug3ryu8rb"]
+
+[ext_resource type="Script" path="res://scripts/healing_tween.gd" id="1_2yrgx"]
+
+[node name="Healing" type="Label"]
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_colors/font_color = Color(0, 0.811765, 0, 1)
+theme_override_constants/outline_size = 1
+theme_override_font_sizes/font_size = 30
+script = ExtResource("1_2yrgx")

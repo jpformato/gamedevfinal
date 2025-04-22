@@ -144,14 +144,16 @@ animations = [{
 }]
 
 [node name="FireBall" type="CharacterBody2D"]
-scale = Vector2(4, 4)
-collision_mask = 2
+z_index = 2
+scale = Vector2(0.3, 0.3)
+collision_layer = 4
 script = ExtResource("1_jfneu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_d3cai")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5bue8")
 animation = &"Explode"

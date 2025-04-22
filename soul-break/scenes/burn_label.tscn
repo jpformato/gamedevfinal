@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dulaprv2m4fux"]
+
+[ext_resource type="Script" path="res://scripts/burn_label_tween.gd" id="1_fgiue"]
+
+[node name="BurnLabel" type="Label"]
+offset_left = -52.0
+offset_top = -21.0
+offset_right = 50.0
+offset_bottom = 21.0
+theme_override_colors/font_color = Color(0.823529, 0.286275, 0, 1)
+theme_override_colors/font_outline_color = Color(0.811765, 0.701961, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 30
+text = "BURNT"
+script = ExtResource("1_fgiue")
