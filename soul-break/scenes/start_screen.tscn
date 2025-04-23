@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://dxghskvs8p4rw"]
+
+[ext_resource type="Script" path="res://scripts/start_screen.gd" id="1_ad7wa"]
+
+[node name="StartScreen" type="Node2D"]
+script = ExtResource("1_ad7wa")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="UI"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 1.475
+anchor_right = 0.025
+anchor_bottom = 1.475
+offset_left = -241.0
+offset_top = -266.0
+offset_right = 242.0
+offset_bottom = -156.0
+theme_override_colors/font_color = Color(0.622363, 0.998278, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0.761056, 0.768686, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 80
+text = "SOUL BREAK"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Start" type="Button" parent="UI"]
+z_index = 1
+layout_mode = 0
+offset_left = -85.0
+offset_top = -1.0
+offset_right = 86.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 30
+text = "Start Game"
+
+[node name="Quit" type="Button" parent="UI"]
+z_index = 1
+layout_mode = 0
+offset_left = -82.0
+offset_top = 138.0
+offset_right = 82.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 30
+text = "Quit Game"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

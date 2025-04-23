@@ -1,10 +1,14 @@
-[gd_scene load_steps=19 format=3 uid="uid://bpv3u37y38a00"]
+[gd_scene load_steps=23 format=3 uid="uid://bpv3u37y38a00"]
 
 [ext_resource type="Script" path="res://scripts/character.gd" id="1_4nw5d"]
 [ext_resource type="Texture2D" uid="uid://c2s06brnqgn34" path="res://assets/CharacterSprites/IdleAnimation.png" id="1_bnxmj"]
 [ext_resource type="Texture2D" uid="uid://b6sxtafx5ct2n" path="res://assets/CharacterSprites/NewIdleAnimation.png" id="2_ujl2h"]
 [ext_resource type="Texture2D" uid="uid://8rtveuq4ifnm" path="res://assets/CharacterSprites/Shadow.png" id="3_sgaxg"]
 [ext_resource type="PackedScene" uid="uid://c0x5dn2fyu130" path="res://scenes/healing_particles.tscn" id="5_swysm"]
+[ext_resource type="AudioStream" uid="uid://ymwdhrpuwlw" path="res://assets/Sounds/sword sound.wav" id="6_dqp5f"]
+[ext_resource type="AudioStream" uid="uid://d3xcrm3isp5qd" path="res://assets/Sounds/Cure7.wav" id="7_1xam4"]
+[ext_resource type="AudioStream" uid="uid://cjvet2ju6lkme" path="res://assets/Sounds/hit01.wav" id="8_h5f2v"]
+[ext_resource type="AudioStream" uid="uid://cfa4lfmivth58" path="res://assets/Sounds/beep.wav" id="9_ryslr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7gbjl"]
 atlas = ExtResource("1_bnxmj")
@@ -106,26 +110,21 @@ frame = 5
 frame_progress = 0.970072
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource("RectangleShape2D_las3b")
 
 [node name="FrontCounter" type="Area2D" parent="."]
-visible = false
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="FrontCounter"]
-visible = false
 position = Vector2(18, 0)
 shape = SubResource("RectangleShape2D_b3hi3")
 disabled = true
 
 [node name="WideCounter" type="Area2D" parent="."]
-visible = false
 collision_layer = 2
 collision_mask = 12
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WideCounter"]
-visible = false
 position = Vector2(14, -1.75)
 shape = SubResource("RectangleShape2D_3spbn")
 disabled = true
@@ -137,6 +136,19 @@ texture = ExtResource("3_sgaxg")
 
 [node name="HealingParticles" parent="." instance=ExtResource("5_swysm")]
 lifetime = 1.0
+
+[node name="SwordSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_dqp5f")
+
+[node name="HealingSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_1xam4")
+
+[node name="DamageSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_h5f2v")
+volume_db = 10.0
+
+[node name="ChargeSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_ryslr")
 
 [connection signal="body_entered" from="FrontCounter" to="." method="_on_front_counter_body_entered"]
 [connection signal="body_entered" from="WideCounter" to="." method="_on_wide_counter_body_entered"]

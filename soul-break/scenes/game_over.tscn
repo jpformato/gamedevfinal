@@ -1,0 +1,62 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4m41mvbdpie6"]
+
+[ext_resource type="Texture2D" uid="uid://sxb4pial5tdl" path="res://assets/Backgrounds/GameOverScene.png" id="1_i3j7m"]
+
+[node name="GameOver" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Title" type="Label" parent="UI"]
+z_index = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.025
+anchor_top = 1.475
+anchor_right = 0.025
+anchor_bottom = 1.475
+offset_left = -241.0
+offset_top = -266.0
+offset_right = 242.0
+offset_bottom = -156.0
+theme_override_colors/font_color = Color(0.92549, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 10
+theme_override_constants/outline_size = 0
+theme_override_font_sizes/font_size = 80
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Replay" type="Button" parent="UI"]
+z_index = 1
+layout_mode = 0
+offset_left = -85.0
+offset_top = -1.0
+offset_right = 86.0
+offset_bottom = 49.0
+theme_override_font_sizes/font_size = 30
+text = "Try Again"
+
+[node name="MainMenu" type="Button" parent="UI"]
+z_index = 1
+layout_mode = 0
+offset_left = -82.0
+offset_top = 138.0
+offset_right = 82.0
+offset_bottom = 188.0
+theme_override_font_sizes/font_size = 30
+text = "Main Menu"
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(-4.5, 1.49999)
+scale = Vector2(7.29375, 7.38889)
+texture = ExtResource("1_i3j7m")

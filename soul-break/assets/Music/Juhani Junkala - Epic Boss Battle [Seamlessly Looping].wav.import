@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cfjto4wo6sjst"
+path="res://.godot/imported/Juhani Junkala - Epic Boss Battle [Seamlessly Looping].wav-f49fb2ea1764dfaf239c7472e45e73dc.sample"
+
+[deps]
+
+source_file="res://assets/Music/Juhani Junkala - Epic Boss Battle [Seamlessly Looping].wav"
+dest_files=["res://.godot/imported/Juhani Junkala - Epic Boss Battle [Seamlessly Looping].wav-f49fb2ea1764dfaf239c7472e45e73dc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
